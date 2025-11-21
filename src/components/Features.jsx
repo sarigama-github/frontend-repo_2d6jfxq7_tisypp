@@ -1,21 +1,20 @@
 import React from 'react'
 
 const features = [
-  { title: 'Instant Issuing', desc: 'Create virtual cards on-demand with spending controls.', emoji: '💳' },
-  { title: 'Zero-Friction API', desc: 'A single, clean endpoint to start charging customers.', emoji: '⚡️' },
-  { title: 'Realtime Insights', desc: 'See transactions and balances update as they happen.', emoji: '📈' },
+  { title: 'One habit, full focus', desc: 'Pick a single small action and show up daily — no clutter, no complex setup.', emoji: '🌱' },
+  { title: 'Human-like nudges', desc: 'Gentle, friendly messages at the right moment — more like a friend than a notification.', emoji: '💬' },
+  { title: 'Simple streaks', desc: 'Reply “Done” and Tend tracks your momentum. Tiny wins that compound over time.', emoji: '✨' },
 ]
 
 function Features() {
   return (
-    <section id="features" className="relative py-16">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(20,184,166,0.15),transparent_60%)]" />
+    <section id="how" className="relative py-16">
       <div className="relative mx-auto max-w-6xl px-6 grid sm:grid-cols-3 gap-4">
         {features.map((f) => (
-          <div key={f.title} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur hover:bg-white/10 transition">
-            <div className="text-2xl">{f.emoji}</div>
-            <h3 className="mt-3 text-white font-medium">{f.title}</h3>
-            <p className="mt-1 text-white/70 text-sm">{f.desc}</p>
+          <div key={f.title} className="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-sm transition">
+            <div className="text-2xl" aria-hidden>{f.emoji}</div>
+            <h3 className="mt-3 text-slate-900 font-medium">{f.title}</h3>
+            <p className="mt-1 text-slate-600 text-sm">{f.desc}</p>
           </div>
         ))}
       </div>
